@@ -542,7 +542,7 @@ For its part, at the code segment level, synchronization is performed by delimit
 
 
 ```java
-public void calculate()(
+public void calculate(){
 	//Sentences not synchronized
 	synchronized (objetoBloqueo) {
 		//Block of unsyncrhonized sentences
