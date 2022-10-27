@@ -14,39 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package UD02;
-
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+package UD02.producer_consumer_v4;
 
 /**
  *
  * @author David Martínez (wwww.martinezpenya.es|www.ieseduardoprimo.es)
  */
-public class PageManagerSolved2 extends Thread {
+public class Consumer extends Thread {
 
-    private static List<String> list = new CopyOnWriteArrayList<String>();
+    SharedData data;
+
+    public Consumer(SharedData data) {
+        this.data = data;
+    }
 
     @Override
     public void run() {
-        while (true) {
-            if (list.size() >= 10) {
-                list.remove(0);
-            } else if (list.size() < 10) {
-                list.add("Text");
+        for (int i = 0; i < 50; i++) {
+            int n = data.get();
+            System.out.println("Consumed number " + n);
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
             }
-            for (String s : list) {
-                //going through the list
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            list.add("Texto");
-        }
-        for (int i = 0; i < 100; i++) {
-            new PageManagerSolved2().start();
         }
     }
 }

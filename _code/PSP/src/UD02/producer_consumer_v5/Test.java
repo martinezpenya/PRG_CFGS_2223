@@ -14,39 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package UD02;
-
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
+package UD02.producer_consumer_v4;
 
 /**
  *
  * @author David Martínez (wwww.martinezpenya.es|www.ieseduardoprimo.es)
  */
-public class PageManagerSolved extends Thread {
-
-    private static Queue<String> list = new ConcurrentLinkedDeque<String>();
-
-    @Override
-    public void run() {
-        while (true) {
-            if (list.size() >= 10) {
-                list.remove(0);
-            } else if (list.size() < 10) {
-                list.add("Text");
-            }
-            for (String s : list) {
-                //going through the list
-            }
-        }
-    }
+public class Test {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            list.add("Texto");
-        }
-        for (int i = 0; i < 100; i++) {
-            new PageManagerSolved().start();
-        }
+        SharedData sd = new SharedData();
+        Producer p = new Producer(sd);
+        Consumer c = new Consumer(sd);
+        p.start();
+        c.start();
     }
+
 }

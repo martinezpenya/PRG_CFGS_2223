@@ -324,7 +324,7 @@ The main methods of the `Thread` class are shown in the following table.
 | `run`           | Method in which the asynchronous block is programmed. It is executed when the start method is called.|
 | `join`          | Blocks the thread until the referenced thread ends.      |
 | `sleep`         | Static method that temporarily stops the execution of the thread. |
-| `getld`         | Returns the identifier of the thread. It is a positive long generated when the thread is created.|
+| `getId`         | Returns the identifier of the thread. It is a positive long generated when the thread is created.|
 | `getName`       | Returns the name of the thread, assigned in some of the constructor forms. |
 | `getState`      | Returns the state of the thread as a value from the `Thread.State` enumeration. |
 | `interrupt`     | Interrupt thread execution.                            |

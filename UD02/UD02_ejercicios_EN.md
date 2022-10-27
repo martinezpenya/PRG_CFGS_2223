@@ -17,7 +17,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
 1. Create two Java classes (threads) that extend the `Thread` class. One of the threads must display the word PING on the screen in an infinite loop and the other the word PONG. Inside the loop use the `sleep()` method so that we have time to see the words that are displayed when we execute it, you will have to add a `try-catch` block (to catch the `InterruptedException` exception). Then create the `main()` function that makes use of the previous threads. Are the PING and PONG texts displayed in order (ie PING PONG PING PONG ...)?
 
-2. Transform the previous exercise but use the Runnable interface to declare the thread.
+2. Transform the previous exercise but use the `Runnable` interface to declare the thread.
 
 3. Make an application that executes 4 threads so that they are executed in an orderly manner one after the other, waiting for each one to finish the previous one to execute
 
@@ -42,9 +42,9 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
    ```java
    long t_start, t_finish;
-   t_start = System.currentTimeMilis();
+   t_start = System.currentTimeMillis();
    Process(); //work
-   t_finish = System.currentTimeMilis();
+   t_finish = System.currentTimeMillis();
    long t_total = t_finish - t_start;
    System.out.println("The work lasted: " + t_total + " miliseconds");
    ```

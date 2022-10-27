@@ -14,40 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package UD02;
-
-import java.util.ArrayList;
-import java.util.List;
+package UD02.producer_consumer_v4;
 
 /**
  *
  * @author David Martínez (wwww.martinezpenya.es|www.ieseduardoprimo.es)
  */
-public class PageManager extends Thread {
+public class SharedData {
 
-    private static List<String> list = new ArrayList<String>();
+    int data;
+    boolean available = false;
 
-    @Override
-    public void run() {
-        while (true) {
-            if (list.size() >= 10) {
-                list.remove(0);
-            } else if (list.size() < 10) {
-                list.add("Text");
+    public synchronized int get() {
+        if (!available) {
+            try {
+                wait();
+            } catch (Exception e) {
             }
-            for (String s : list) {
-                //going through the list
-            }
-
         }
+        available = false;
+        notify();
+        return data;
+
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            list.add("Texto");
+    public synchronized void put(int newData) {
+        if (available) {
+            try {
+                wait();
+            } catch (Exception e) {
+            }
         }
-        for (int i = 0; i < 100; i++) {
-            new PageManager().start();
-        }
+        data = newData;
+        available = true;
+        notify();
     }
 }

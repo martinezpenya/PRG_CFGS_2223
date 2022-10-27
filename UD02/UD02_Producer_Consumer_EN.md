@@ -122,7 +122,7 @@ Produced number 4
 
 # Version 2
 
-We might think that if we just added the `synchronized` keyword to the `get` and `put` methods of the `SharedData` class, it would solvemos el problema:
+We might think that if we just added the `synchronized` keyword to the `get` and `put` methods of the `SharedData` class, it should solve the problem:
 
 ```java
 public class SharedData {
