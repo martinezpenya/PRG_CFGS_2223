@@ -55,7 +55,7 @@ To more accurately illustrate how a single-threaded program behaves versus multi
 The programming that allows this type of system to be carried out is called multithreading, concurrent or asynchronous.
 
 
-## Sequential or single thread programming
+## Sequential or single-thread programming
 
 The following example programmed in Java illustrates how a program that runs in a single thread behaves, as well as the consequences that this implies. The program is composed of a single class (represents a mouse) composed of two attributes: the name and the time in seconds it takes to eat. In the main method several objects (mice) are instantiated and the eat method of each of them is called. This method displays some text on the screen when it starts, pauses for the duration in seconds (with the sleep method of the Thread class) indicated by the FeedTime parameter, and finally displays another text on the screen when it ends.
 
@@ -542,7 +542,7 @@ For its part, at the code segment level, synchronization is performed by delimit
 
 
 ```java
-public void calculate()(
+public void calculate(){
 	//Sentences not synchronized
 	synchronized (objetoBloqueo) {
 		//Block of unsyncrhonized sentences
@@ -563,7 +563,7 @@ If they used different objects instead, the result would be the same as not mark
 
 See the [Example24](#Example24)
 
-For its part, synchronization at the segment level also needs a `monitor`, but since it does not depend on the object in which it is being executed, it is more flexible. Using synchronized blocks it is not necessary to block all the segments of an object as is the case with object methods, but they can be grouped into different monitors.
+On its part, synchronization at the segment level also needs a `monitor`, but since it does not depend on the object in which it is being executed, it is more flexible. When using synchronized blocks it is not necessary to block all the segments of an object as is the case with object methods, but they can be grouped into different monitors.
 
 In [Example25](#Example25) synchronization is performed at the block level, using two different locks in each of them. In such a way that the methods are not exclusive of each other. The synchronization is done at the method level (each of the methods can only be executed by one object at a time, but both methods can be executed by two different objects).
 

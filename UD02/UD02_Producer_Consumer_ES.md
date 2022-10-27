@@ -57,6 +57,7 @@ public class Producer extends Thread {
             try {
                 Thread.sleep(10);
             } catch (Exception e) {
+                System.err.println("Exception: " + e.getMessage());
             }
         }
     }
@@ -82,6 +83,7 @@ public class Consumer extends Thread {
             try {
                 Thread.sleep(10);
             } catch (Exception e) {
+                System.err.println("Exception: " + e.getMessage());
             }
         }
     }
