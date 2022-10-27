@@ -55,7 +55,7 @@ To more accurately illustrate how a single-threaded program behaves versus multi
 The programming that allows this type of system to be carried out is called multithreading, concurrent or asynchronous.
 
 
-## Sequential or single thread programming
+## Sequential or single-thread programming
 
 The following example programmed in Java illustrates how a program that runs in a single thread behaves, as well as the consequences that this implies. The program is composed of a single class (represents a mouse) composed of two attributes: the name and the time in seconds it takes to eat. In the main method several objects (mice) are instantiated and the eat method of each of them is called. This method displays some text on the screen when it starts, pauses for the duration in seconds (with the sleep method of the Thread class) indicated by the FeedTime parameter, and finally displays another text on the screen when it ends.
 
