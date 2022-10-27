@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package UD02.producer_consumer_v4;
+package UD02.producer_consumer_v5;
 
 /**
  *
@@ -23,16 +23,18 @@ package UD02.producer_consumer_v4;
 public class Consumer extends Thread {
 
     SharedData data;
+    int id;
 
-    public Consumer(SharedData data) {
+    public Consumer(SharedData data, int id) {
         this.data = data;
+        this.id=id;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
             int n = data.get();
-            System.out.println("Consumed number " + n);
+            System.out.println("Consumed number " + n + " by " + this.id );
             try {
                 Thread.sleep(10);
             } catch (Exception e) {

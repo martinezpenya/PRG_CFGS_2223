@@ -26,7 +26,9 @@ public class RunnableSharing extends Thread {
 
     @Override
     public void run() {
-        counter++;
+        for (int i = 0; i < 1000; i++) {
+            counter++;           
+        }
         System.out.println("Counter: " + counter);
     }
 

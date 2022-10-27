@@ -31,7 +31,7 @@ public class Producer extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
-            data.put(i);
+            data.set(i);
             System.out.println("Produced number " + i);
             try {
                 Thread.sleep(10);

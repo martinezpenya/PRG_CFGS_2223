@@ -52,5 +52,8 @@ public class MethodSyncronizationBis implements Runnable {
         MethodSyncronizationBis ms = new MethodSyncronizationBis();
         new Thread(ms).start();
         new Thread(ms).start();
+        new Thread(ms).start();
+        new Thread(ms).start();
+        new Thread(ms).start();
     }
 }

@@ -28,7 +28,7 @@ public class SharedData {
         return data;
     }
 
-    public void put(int newData) {
+    public void set(int newData) {
         data = newData;
     }
 }

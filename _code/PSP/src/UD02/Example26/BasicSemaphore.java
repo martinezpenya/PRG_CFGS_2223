@@ -24,7 +24,7 @@ import java.util.concurrent.Semaphore;
  */
 public class BasicSemaphore implements Runnable {
 
-    Semaphore semaphore = new Semaphore(3);
+    Semaphore semaphore = new Semaphore(5);
 
     @Override
     public void run() {

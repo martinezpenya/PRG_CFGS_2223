@@ -52,5 +52,9 @@ public class MethodSyncronization implements Runnable {
         MethodSyncronization ms = new MethodSyncronization();
         new Thread(ms).start();
         new Thread(ms).start();
+        new Thread(ms).start();
+        new Thread(ms).start();
+        new Thread(ms).start();
+        new Thread(ms).start();
     }
 }

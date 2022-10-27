@@ -31,6 +31,7 @@ public class SegmentSyncronization extends Thread {
     }
 
     public void method1() {
+        
         synchronized (block1) {
             System.out.printf("Method 1 from thread %d start\n", id);
             try {
@@ -40,6 +41,7 @@ public class SegmentSyncronization extends Thread {
             }
             System.out.printf("Method 1 from thread %d ends\n", id);
         }
+        
     }
 
     public void method2() {

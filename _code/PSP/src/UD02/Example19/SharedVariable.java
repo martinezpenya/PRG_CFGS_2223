@@ -26,13 +26,13 @@ public class SharedVariable extends Thread {
 
     @Override
     public void run() {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             counter++;
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             new SharedVariable().start();
         }
         try {
