@@ -15,7 +15,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
 # Ejercicios
 
-1. Crea dos clases (hilos) Java que extiendan la clase `Thread`. Uno de los hilos debe mostrar en pantalla en un buble infinito la palabra PING y el otro la palabra PONG. Dentro del bucle utiliza el método `sleep()` para que nos de tiempo a ver las palabras que se visualizan cuando lo ejecutemos, tendrás que añadir un bloque `try-catch` (para capturar la excepción `InterruptedException`). Crea después la función `main()` que haga uso de los hilos anteriores. ¿Se visualizan los textos PING y PONG de forma ordenada (es decir PING PONG PING PONG ...)?
+1. Crea dos clases (hilos) Java que extiendan la clase `Thread`. Uno de los hilos debe mostrar en pantalla en un bucle infinito la palabra PING y el otro la palabra PONG. Dentro del bucle utiliza el método `sleep()` para que nos de tiempo a ver las palabras que se visualizan cuando lo ejecutemos, tendrás que añadir un bloque `try-catch` (para capturar la excepción `InterruptedException`). Crea después la función `main()` que haga uso de los hilos anteriores. ¿Se visualizan los textos PING y PONG de forma ordenada (es decir PING PONG PING PONG ...)?
 
 2. Transforma el ejercicio anterior pero usando la interfaz Runnable para declarar el hilo. 
 
