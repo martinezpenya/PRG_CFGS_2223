@@ -75,8 +75,6 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
 5. Cree un servidor que devuelva el signo zodiacal europeo y chino a partir de la fecha de nacimiento que envia el cliente.
 
-6. 
-
 # Comprobación
 
 1. ¿Cuál de los siguientes protocolos de internet corresponde ala capa de internet?
