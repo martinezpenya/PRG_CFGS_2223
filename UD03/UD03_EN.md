@@ -176,7 +176,7 @@ Inetaddress address = InetAddress.getByName ("www.martinezpenya.es");
 You can also get such an object from an `IP` address represented as a `String`:
 
 ```java
-InetAddress address = InetAddress.getByName("51.68.98.141");
+InetAddress address = InetAddress.getByName("51.68.98.141");//revisar
 ```
 
 ## `SocketAddress`
