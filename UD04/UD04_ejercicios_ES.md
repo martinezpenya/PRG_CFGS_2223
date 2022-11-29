@@ -9,158 +9,125 @@ header: ${title} - ${subject} (ver. ${today})
 footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
 typora-root-url:${filename}/../
 typora-copy-images-to:${filename}/../assets
-imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cover.png
+imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cover.png
 ---
 [toc]
 
 # Ejercicios
 
-1. Intercambio de mensajes de texto entre cliente y servidor a través de sockets TCP. 
+1. Usa los conocimientos adquiridos en la unidad para descargar un archivo `json`  y muestre el contenido correctamente formateado.
 
-   Crear una aplicación cliente y una aplicación servidor que intercambien mensajes de texto basando la comunicación en sockets TCP.
+   Para ello busca y estudia el funcionamiento de algún servicio web gratuito que proporcione información en formato JSON. 
 
-   La salida generada por la ejecución del servidor es la siguiente:
+   Busca e investiga sobre como leer información de un fichero en JSON (puedes apoyarte en el API o buscar alguna libreria).
 
-   ```sh
-   (Servidor) Esperando conexiones...
-   (Servidor) Conexión establecida.
-   (Servidor) Abriendo canales de texto...
-   (Servidor) Canales de texto abiertos.
-   (Servidor) Leyendo mensaje...
-   (Servidor) Mensaje leido.
-   (Servidor) Mensaje recibido: Mensaje enviado desde el cliente
-   (Servidor) Enviando mensaje...
-   (Servidor) Mensaje enviado.
-   (Servidor) Cerrando canales de texto.
-   (Servidor) Canales de texto cerrados.
-   (Servidor) Cerrando conexiones...
-   (Servidor) Conexiones cerradas.
-   ```
+   Desarrolla una aplicación que acceda al mismo, recupere información y la muestre por pantalla. No puedes mostrar el JSON tal y como lo descargas, sino mostrando la información que contiene ya depurada.
 
-   La salida generada por la ejecución del cliente es la siguiente:
+   Algunas sugerencias de servicios web que cumplen con estos estos requisitos son las siguiente (puedes usar otra si lo prefieres):
 
-   ```sh
-   (Cliente) Estableciendo conexión...
-   (Cliente) Conexión establecida.
-   (Cliente) Abriendo canales de texto...
-   (Cliente) Canales de texto abiertos.
-   (Cliente) Enviando mensaje...
-   (Cliente) Mensaje enviado.
-   (Cliente) Mensaje leido.
-   (Cliente) Mensaje recibido: Mensaje enviado desde el servidor
-   (Cliente) Cerrando canales de texto.
-   (Cliente) Canales de texto cerrados.
-   (Cliente) Cerrando conexiones...
-   (Cliente) Conexiones cerradas.
-   ```
+   - Open Movie Database - http://www.omdbapi.com/
+   - Consulta de premios de la Lotería de Navidad de El País - https://servicios.elpais.com/sorteos/loteria-navidad/api/
+   - Datos de la Agencia estatal de Meteorología - https://opendata.aemet.es/centrode-descargas/inicio
 
-2. Lectura remota de ficheros.
-   Desarrollar una aplicación en Java que permita leer un fichero de texto ubicado en otro ordenador a través de sockets. Los pasos del proceso serán los siguientes:
+2. Realiza un cliente FTP que pedirá por pantalla el host, puerto, usuario y contraseña para conectar a un servidor FTP. Si la conexión es satisfactoria, pedira la ruta de un archivo local para subirlo al FTP. Una vez subido lo descargará de nuevo con tu nombre y apellido y la extensión `psp`.
 
-   - Programa cliente: solicita al usuario el nombre de un fichero incluyendo su ruta completa dentro del sistema de archivos del servidor.
-   - Programa cliente: envía el nombre y la ruta del fichero al servidor.
-   - Programa servidor: lee el contenido del fichero y se lo envía al cliente.
-   - Programa cliente: muestra el contenido por la pantalla.
+3. Realiza un cliente de correo electrónico, que ayudado por el SMTP de gmail pida al usuario la dirección del destinatario, del remitente, la constraseña, el asunto, el texto, y la ruta de un archivo local que se adjuntará al correo electrónico.
 
-3. Transferencia de datos por UDP
-   Desarrollar una aplicación en Java que transmite números desde un cliente a un servidor mediante el uso de sockets UDP. Los pasos del proceso son los siguientes: 
+4. Realiza un cliente de correo electrónico, que acceda a una cuenta de gmail por IMAP. Solicitará al usuario la dirección de correo electrónico, la contraseña. Una vez correctamente conectado la aplicación mostrará un listado con todas las carpetas (etiquetas) disponibles en la cuenta de correo electrónico. El usuario podrá elegir una de ellas y a continuación se mostrará el remitente, destinatario, asunto, texto o un mensaje que indique si contiene adjuntos de todos los correos contenidos en dicha carpeta elegida por el usuario.
 
-   - Programa cliente: mediante un bucle genera y envía 10 000 mensajes con el contenido «Mensaje: numero_mensaje» tomando numero_mensaje los valores entre O y 9999.
-   - Programa cliente: cuando ha enviado todos los números manda la cadena «FIN».
-   - Programa servidor: recibe los mensajes y los almacena en un fichero.
-   - Programa servidor: cuando recibe la cadena «FIN» termina la ejecución.
-   - Una vez finalizada la ejecución, comprobar si han llegado todos los datagramas en el mismo orden que se enviaron. Si la ejecución se realiza en un mismo ordenador es probable que lleguen todos los mensajes en el orden correcto. Si la ejecución se realiza en una red de varios ordenadores quizás se produzca alguna pérdida o desorden. Dependerá de muchos factores por lo que cualquier escenario es posible.
+5. Realiza una aplicación distribuida, usando JAVA RMI de manera que el cliente solicite una operación de suma, resta, multiplicación o división al usuario, y esta en lugar de ser procesada por el cliente, sea enviada a un servidor que realizará la operación y devolverá el resultado correcto.
 
-4. Cree un servidor que recoja los números que se envían desde el cliente y que devuelva la suma en el momento de enviar un cero.
+6. Desarrolla una aplicación distribuida en la que el servidor proporcione un servicio de obtención de definiciones de términos relacionados con cualquier disciplina.
 
-5. Cree un servidor que devuelva el signo zodiacal europeo y chino a partir de la fecha de nacimiento que envia el cliente.
+   Por ejemplo, si se solicita la definición del término «fuselaje» relativo a las partes de los aviones, el servidor debe responder algo similar a «Parte central del avión. Es el habitáculo donde van las personas y los enseres transportados». El cliente solicitará el termino a obtener, y será el servidor quien lo proporcionará accediendo a una base de datos local, un archivo, o una estructura de datos en memoria.
 
 # Comprobación
 
-1. ¿Cuál de los siguientes protocolos de internet corresponde ala capa de internet?
-   a) TCP
-   b) UDP.
-   e) HTTP.
-   d) IP.
-
-2. ¿Qué característica no es propia del protocolo `TCP`?
-   a) Está orientado a conexión.
-   b) Garantiza que los paquetes lleguen de forma ordenada.
-   c) Cada paquete puede llegar a su destino por una ruta distinta.
-   d) Garantiza que todos los paquetes se entreguen al destinatario.
-
-3. Para qué es más apropiado utilizar el protocolo `UDP`?
-   a) Para la transferencia de páginas web.
-   b) Para comunicaciones de voz.
-   c) Para transferir ficheros.
-   d) Para enviar correos electrónicos.
-
-4. ¿Qué método de la clase `InetAddress` proporciona la dirección `IP` en modo texto?
-   a) `getByName`.
-   b) `getHostAddress`.
-   c) `getHostName`.
-   d) `getByAddress`.
-
-5. ¿Qué método de la clase ServerSocket queda a la espera de recibir peticiones?
-   a) `accept`.
-   b) `bind`.
-   e) `close`.
-   d) `isBound`.
-
-6. ¿Qué método de la clase Socket proporciona un stream de lectura?
-   a) `connect`.
-   b) `bind`.
-   e) `getinputStream`.
-   d) `getOutputStream`.
-
-7. ¿Qué método de DatagramSocket permite enviar un datagrama?
-
-   a) `flush`.
-   b) `send`.
-   e) `getOutputStream`.
-   d) `connect`.
-
-8. ¿Qué información hay que proporcionar obligatoriamente a un socket servidor?
-   a) La dirección IP.
-   b) El nombre del host.
-   c) El puerto de escucha de peticiones.
-   d) La dirección IP del cliente.
-
-9. ¿Qué información hay que proporcionar obligatoriamente a un socket cliente?
-   a) La dirección IP o el nombre del servidor.
-   b) La dirección IP o el nombre del cliente.
-   e) El puerto de comunicación utilizado por el cliente.
-   d) El número de hilos admitidos.
-
-10. ¿Cuál es el primer paso para crear un servidor de sockets TCP?
-    a) Indicar al socket servidor que se quede a la espera de peticiones.
-    b) Aceptar el establecimiento de la conexión.
-    c) Crear un socket de tipo servidor asociado a una dirección y un puerto.
-    d) Intercambiar datos con el cliente.
+1. ¿Cuál es el protocolo en el que se basa la web?
+   a) FTP
+   b) SMTP.
+   e) DNS.
+   d) HTTP.
+2. ¿Cuál es el código de respuesta de HTTP que indica que la página no ha sido encontrada?
+   a) 204.
+   b) 304.
+   c) 404.
+   d) 504.
+3. ¿Cuál es el código de respuesta de HTTP que indica que la petición se ha atendido correctamente?
+   a) 200.
+   b) 300.
+   e) 400.
+   d) 500.
+4. ¿Cuál es el protocolo específicamente diseñado para la transferencia de ficheros?
+   a) FTP.
+   b) SMTP.
+   e) DHCP.
+   d) Telnet.
+5. ¿Cuál es el protocolo específicamente diseñado para el envío de correos electrónicos?
+   a) SMTP.
+   b) IMAP.
+   e) POP3.
+   d) FTP.
+6. ¿Qué protocolo se utiliza para la lectura de los correos electrónicos sin que estos se eliminen del servidor?
+   a) SMTP.
+   b) IMAP.
+   e) POP3.
+   d) FTP.
+7. ¿Cuál es el protocolo en el que se basa el servicio de internet que traduce los nombres de dominio a su dirección IP?
+   a) SMTP
+   b) Telnet.
+   c) DNS.
+   d) DHCP.
+8.  ¿Cuál es el protocolo para conectarse remotamente a un servidor para administrarlo de manera segura desde un terminal?
+   a) Telnet.
+   b) HTTPS.
+   c) NFS.
+   d) SSH.
+9. ¿Qué puerto utiliza por defecto el protocolo HTTP?
+   a) 80.
+   b) 443.
+   c) 21.
+   d) 25.
+10. ¿Cuál es la clase de Java que representa una conexión HTTP?
+    a) `java.net.URL`.
+    b) `java.netHttpURLConnection`.
+    c) `java.net.http.HttpClient`.
+    d) `java.net.HttpRequest`.
+11. ¿Cómo se llama el API de Java para el envío y recepción de correos?
+    a) Apache Commons.
+    b) Java Email API.
+    c) JavaMail.
+    d) Java Message API.
+12. ¿Cómo se llama el programa proporcionado por el JDK de Java para arrancar el registro de objetos en aplicaciones RMI?
+    a) registryrmi.
+    b) rmiregistry.
+    e) lookup.
+    d) bindobjectservice.
 
 # Actividades de aplicación
 
-1. Enumera las capas del modelo TCP/IP.
-2. Indica en qué se diferencian las direcciones IPv4 y las IPv6.
-3. Explica en qué se diferencia un mensaje de un paquete en comunicaciones en red.
-4. Haz una descripción del concepto de datagrama.
-5. Averigua qué puerto utilizan por defecto los servidores de base de datos MySQL.
-6. Dado un URL averigua la IP utilizando los métodos de la clase InetAddress.
-7. Dada una IP averigua la URL del host utilizando los métodos de la clase InetAddress.
-8. Explica las diferencias entre los sockets de tipo TCP y los de tipo UDP.
-9. Explica por qué la web utiliza el protocolo TCP y no puede utilizar UDP.
-10. Enumera los pasos que hay que seguir para crear un servidor de sockets TCP.
-11. Enumera los pasos que hay que seguir para crear un cliente de sockets UDP.
-12. Describe por qué un servidor web debe tener múltiples hilos para atender las peticiones de los clientes.
-13. Explica por qué elegirías utilizar UDP como protocolo para desarrollar un juego en red.
+1. Enumera y describe los grupos de código de retorno del protocolo HTTP.
+2. Indica en qué se diferencian los protocolos HTTP y HTTPS.
+3. Describe el papel del protocolo SMTP en el servicio de correo electrónico.
+4. Explica en qué se diferencian los protocolos IMAP y POP3 en el servicio de correo electrónico.
+5. Compara el protocolo SSH y Telnet. Indica cuál se debe utilizar en la actualidad y explica las razones. 
+6. Describe los pasos para realizar una petición HTTP en Java con la versión 1.8.
+7. Indica cómo se debe programar una petición HTTP en Java a partir de la versión 1.8.
+8.  Enumera las librerías que proporciona Apache Commons para el desarrollo de servicios en red en Java.
+9. Explica cómo se puede realizar la descarga de un fichero mediante el protocolo FTP desde Java.
+10. Describe el proceso de envío de correos electrónicos desde Java cuando estos solo contienen texto plano.
+11. Indica cómo se realiza la descarga de los correos electrónicos de una cuenta desde Java.
+12. Explica qué función tiene el programa rmiregistry en la programación de aplicaciones distribuidas con RMI en Java.
 
 # Ampliación
 
-1. Profundiza en el conocimiento del modelo de interconexión de sistemas abiertos (OSI). Busca información referente a la aparición de las direcciones IPv6. Averigua cuándo aparecieron y empezaron a utilizarse. Descubre si están implementadas al 100%.
-2. Confirma que los siguientes lenguajes de programación permiten la programación de sockets TCP: Java, Python, PHP, Ct, C++ y Kotlin.
-3. Los sockets UDP utilizan datagramas y estos tienen un límite de tamaño. Descubre cuál es el tamaño mínimo y máximo.
-4. La clase MulticastSocket de Java es una subclase de DatagramSocket. Averigua para qué sirve.
-5. Los WebSockets permiten establecer una comunicación bidireccional en tiempo real entre un servidor y un navegador web. Profundiza en el conocimiento de esta tecnología.
+1.  Descubre qué es un servidor web Apache.
+2. Averigua qué es un analizador de paquetes o sniffer. ¿Qué relación tienen estos sistemas con los protocolos HTTP y HTTPS?
+3. Obtén información referente a los códigos de HTTP siguientes: 202, 401, 402, 403 y 501.
+4. Busca tres programas clientes de FTP para el sistema operativo del ordenador en el que trabajas habitualmente.
+5. Descubre cómo subir un fichero a un servidor FTP desde una terminal del sistema operativo.
+6. Aprende a conectarte por SSH con un servidor.
+7. Busca información referente a CORBA (Common Object Request Broker Architecture). Averigua para qué se utiliza y en qué se diferencia de RMI.
 
 # Fuentes de información
 

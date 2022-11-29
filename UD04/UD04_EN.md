@@ -69,7 +69,7 @@ By default HTTP uses port 80 while HTTPS uses 443.
 
 ## FTP
 
-The File Transfer Protocol (FTPo File Transfer Protocol) allows the transfer of files of all kinds between devices. It is based on a client-server architecture and uses the TCP protocol.
+The File Transfer Protocol allows the transfer of files of all kinds between devices. It is based on a client-server architecture and uses the TCP protocol.
 
 FTP uses port 21 by default.
 
@@ -120,6 +120,7 @@ The port used by default is 389.
 ## NFS
 
 The Network File System (NFS or Network File System) allows you to distribute files on a network and access them from any node on it.
+
 It uses port 2049.
 
 ## SNMP
@@ -259,7 +260,7 @@ The main method is:
 | ------------ | -------------------------------------------------- ---------- |
 | `newBuilder` | Static method that creates a builder (interface object `HttpRequest.Builder`). |
 
-For its part, the HttpRequest.Builder interface provides the following methods:
+For its part, the `HttpRequest.Builder` interface provides the following methods:
 
 | Method | Description |
 | ----------- | -------------------------------------------------- ---------- |
@@ -370,7 +371,7 @@ Due to issues related to licenses and the evolution of Java versions, there are 
 
 ## HTTP requests based on `HttpUrlConnection`
 
-Until Java version 1.8, the HttpURLConnection class from the java.net package has been the basis for programming applications capable of accessing web resources.
+Until Java version 1.8, the `HttpURLConnection` class from the `java.net` package has been the basis for programming applications capable of accessing web resources.
 
 The steps to make an HTTP request without parameters with this class are the following:
 
@@ -393,7 +394,7 @@ Look at [Example1](#Example1) and [Example2](#Example2)
 
 ## HTTP requests based on `java.net.http`
 
-Starting with Java version 11, the java.net.http package was introduced to provide a more powerful, easier, and up-to-date alternative to making HTTP requests (it supports HTTP/1.1, HTTP/2, and WebSockets).
+Starting with Java version 11, the `java.net.http` package was introduced to provide a more powerful, easier, and up-to-date alternative to making HTTP requests (it supports HTTP/1.1, HTTP/2, and WebSockets).
 
 > WebSockets allow event-based, bidirectional communication to be established between a web server and a browser.
 
@@ -427,7 +428,7 @@ The main classes are in the `org.apache.commons.net.ftp` package and are shown b
 | ------------ | -------------------------------------------------- ---------- |
 | `FTP` | It provides the functionality necessary to implement an FTP client. It includes constants to indicate the type of files to be transmitted and their configuration. |
 | `FTPClient` | FTP subclass, encapsulates the functionality needed to upload and download files via the FTP protocol. |
-| `FRPSClient` | Subclass of FTPClient, allows to use the FTP protocol over SSL. |
+| `FTPSClient` | Subclass of FTPClient, allows to use the FTP protocol over SSL. |
 | `FTPFile` | Represents information about files stored on the server. |
 | `FTPReply` | Stores the constants that represent the return codes of the FTP protocol. |
 
@@ -456,13 +457,13 @@ The `FTPClient` class is the one that provides the communication methods with th
 Check the [Example4](#Example4)
 
 
-# Scheduling sending and receiving emails
+# Sending and receiving emails
 
 Sending and receiving email from native Java classes is possible but extremely dry and time consuming. Fortunately, there are alternatives that provide simpler and more compact mechanisms.
 
 The JavaMail framework has the necessary classes to be able to program the most common actions that a computer system could perform in relation to emails, such as sending and receiving messages with and without attachments.
 
-You can use `JavaMail` by downloading and adding to the project the libraries contained in the `javax.mail.jar` and `javax.activation-1.2.0.jar` files (Not to be confused with `javax.activation-api-1.2 .0.jar`).
+You can use `JavaMail` by downloading and adding to the project the libraries contained in the `javax.mail.jar` and `javax.activation-1.2.0.jar` files (Not to be confused with `javax.activation-api-1.2.0.jar`).
 
 The process of sending emails composed only of texts consists of the following steps:
 
