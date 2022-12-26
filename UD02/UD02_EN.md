@@ -421,7 +421,7 @@ In Java, some simple actions are atomic:
 
 > Very simple actions, such as incrementing the value of a variable of type `int` by 1, are not atomic, so you have to evaluate whether it is necessary to establish a synchronization mechanism.
 
-### critical section
+### Critical section
 
 The critical section of a multithreaded program is the block of code that accesses shared resources, so it should only be accessed by a single thread of execution. Correctly determining the critical section allows the program to be correctly synchronized to avoid concurrency errors, as well as making it efficient in order to take maximum advantage of parallelism. Ensuring that only one thread accesses the critical section is known as **mutual exclusion**.
 
@@ -452,7 +452,7 @@ that some threads never have access to the CPU.
 
 Occurs when two blocks of concurrent code have dependencies between input and output data and are not executed in the correct order (flow dependency or anti-dependency).
 
-### memory inconsistency
+### Memory inconsistency
 
 Occurs when two or more threads simultaneously have different values ​​for the same variable.
 

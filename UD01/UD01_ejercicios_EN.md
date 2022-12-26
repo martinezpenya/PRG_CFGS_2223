@@ -211,7 +211,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
    d) TIY.
 
-10. Processing running on different independent but connected computers
+10. Process running on different independent but connected computers
      and synchronized is called:
 
     a) Distributed.
@@ -220,7 +220,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
     c) Parallel.
 
-    d) Monohilo.
+    d) Singlethread.
 
 11. Which of the following is not a goal of the operating system process scheduler?
 

@@ -470,10 +470,10 @@ A process, although it is an independent entity, can generate an output that is 
 
 - **New**: The process is newly created and ready to be admitted.
 
-- **Done**: The process has been admitted and is ready to run. You can also get here after being interrupted or because an Entry/Exit or event has been completed.
+- **Ready**: The process has been admitted and is ready to run. You can also get here after being interrupted or because an Entry/Exit or event has been completed.
 - **Running**: the process is currently running, that is, using the processor (the decision is made by the scheduler). If an interrupt arrives (for example because another process has a higher priority or was waiting for a resource that was busy), the process is returned to the **Ready** state. If, on the other hand, it finishes all the operations that it had assigned, it will go to the **Completed** state.
 - **Waiting**: If the process needs Input/Output or some event while it is running, it will go to the **Ready** state until this task is completed.
-- **Done**: The process has completed all its tasks and exits the system.
+- **Terminated**: The process has completed all its tasks and exits the system.
 
 ### Difference between dispatcher and scheduler
 

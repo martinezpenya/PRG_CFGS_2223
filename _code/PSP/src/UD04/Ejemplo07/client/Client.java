@@ -43,7 +43,7 @@ public class Client {
         Client client = new Client();
         int result;
         try {
-            result = client.calculator.add(34, 5);
+            result = client.calculator.substract(34, 5);
             System.out.println(result);
         } catch (RemoteException e) {
             e.printStackTrace();

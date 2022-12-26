@@ -125,7 +125,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD01/assets/cove
 
 # Activities
 
-1. What is a thread or thread?
+1. What is a thread?
    a) A small process that runs in its own memory space.
    b) A small computing unit that runs independently.
    c) A small unit of computation that runs within the context of a process.

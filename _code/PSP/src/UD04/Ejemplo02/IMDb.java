@@ -39,7 +39,6 @@ public class IMDb {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Content-Type", "text/plain");
-
         connection.setRequestProperty("charset", "utf-8");
         connection.setRequestProperty("User-Agent", "Mozilla/5.0");
         int state = connection.getResponseCode();
