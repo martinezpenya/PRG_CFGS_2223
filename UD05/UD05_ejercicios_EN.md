@@ -148,7 +148,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
    }
    ```
 
-4. Write a program that splits two numbers received in main into `args[0]` and `args[1]`.
+4. Write a program that divide two numbers received in main into `args[0]` and `args[1]`.
 
    Example:
     ```sh
@@ -396,7 +396,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
 
 13. Write a program that plays with the user to guess a number. The computer must generate a number between 1 and 500, and the user has to try to guess it. To do this, each time the user enters a value, the computer must tell the user if the number to be guessed is greater or less than the number entered by the user. When it manages to guess it, it must indicate it and print on the screen the number of times the user has tried to guess the number. If the user enters something that is not a number, they must indicate it on the screen, and count it as an attempt. It must be checked that the reading that is performed is really an integer, and if not, give an error message and request it again. *Scanner* indicates that it failed to recognize the input by throwing the exception `InputMismatchException`.
 
-14. Try to guess the screen output that the following program would produce:
+14. Try to guess the screen output that the following program would produce, explain why happens this:
     ```java
     public class EjemploExcepciones {
     
@@ -423,9 +423,9 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
 # Log4j2
 
 1. Write a simple program using Log4j2 that prints ALL error levels to the console.
-2. Write a simple program using Log4j2 to print FATAL errors to SYSTEM_ERR and the rest of the error levels to SYSTEM_OUT.
-3. Write an example program in which FATAL errors go to a text file, ERROR level errors appear red on the console (system_err) and the rest appear on the normal console (system_out).
-4. Change the Output Pattern so that the first thing that appears in the LOG line is your initials.
+2. Using the program from the exercise 1, generate a manual configuration file to print FATAL errors to SYSTEM_ERR and the rest of the error levels to SYSTEM_OUT. (Add comments in the XML with `<!--Your comment-->` )
+3. Using the program from the exercise 1, generate a manual configuration file in which FATAL errors go to a text file, ERROR level errors appear red on the console (system_err) and the rest appear on the normal console (system_out).
+4. Using the previous file (exercise 3) change the Output Pattern so that the first thing that appears in the LOG line are your initials.
 
 
 # Information sources

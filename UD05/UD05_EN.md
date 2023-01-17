@@ -34,23 +34,23 @@ Therefore, it is about reaching a consensus among all the elements involved in t
 
 There are three basic principles called the CIA triad, for its acronym in English, regarding computer security:
 
-- Confidentiality (in English Confidentiality): It is the characteristic that a data, information or message has that allows it to be understandable only by the system or person who is authorized to understand and use its content.
+- Confidentiality: It is the characteristic that a data, information or message has that allows it to be understandable only by the system or person who is authorized to understand and use its content.
 
-- Integrity (in English Integrity): It is the property that has a data, information or message that makes it possible to ensure that it has not undergone a voluntary or accidental modification of the original content. You must preserve its accuracy and completeness.
-- Availability (in English Availability): It is the possibility offered by the data, information, messages or systems that allows them to be accessible at all times by any user or system that is authorized to do so.
+- Integrity: It is the property that has a data, information or message that makes it possible to ensure that it has not undergone a voluntary or accidental modification of the original content. You must preserve its accuracy and completeness.
+- Availability: It is the possibility offered by the data, information, messages or systems that allows them to be accessible at all times by any user or system that is authorized to do so.
 
 In addition to these, the services provided to us are important:
 
 
-- Authentication (in English Authentication): It is the mechanism that allows verifying that a user or system is who it claims to be. A combination of at least two elements of the following factors is usually used:
+- Authentication: It is the mechanism that allows verifying that a user or system is who it claims to be. A combination of at least two elements of the following factors is usually used:
   - Something you know, that we have chosen (for example: our user's password, our credit card pin, etc.)
   - Something that you have, that someone has given us (for example: a credit card, digital certificate, mobile device, etc.)
   - Something that you are, from our body (for example: our fingerprints, our iris, our face, etc.)
 - Access control: ensures that access to information or systems is restricted based on security and business needs.
-- No repudiation (in English No repudiation): serves to ensure that a system/user has participated in a communication, the preparation of information or access to it.
+- No repudiation: serves to ensure that a system/user has participated in a communication, the preparation of information or access to it.
   - at origin: the sender cannot deny that it is he who sent the message.
   - at destination: the receiver cannot deny that he received the message.
-- Traceability (in English Traceability): records the information on the use or accesses that have occurred on the systems or the information object of observation. It stores something similar to a history with everything that has happened in the system and its information.
+- Traceability: records the information on the use or accesses that have occurred on the systems or the information object of observation. It stores something similar to a history with everything that has happened in the system and its information.
 
 The three basic principles, together with the four services that we have just named, form the 7 pillars of computer security:
 
@@ -280,16 +280,16 @@ Example:
 
 ```java
 try {
-    int a[] = new int[5];
+    int[] a = new int[5];
     a[5] = 30 / 0;
 } catch (ArithmeticException e) {
-    System.out.println(&quot;Ha ocurrido un error aritmético&quot;);
+    System.out.println("Ha ocurrido un error aritmético");
 } catch (ArrayIndexOutOfBoundsException e) {
-    System.out.println(&quot;Ha ocurrido un error de índice fuera de rango&quot;);
+    System.out.println("Ha ocurrido un error de índice fuera de rango");
 } finally {
-    System.out.println(&quot;Este mensaje siempre lo veremos&quot;);
+    System.out.println("Este mensaje siempre lo veremos");
 }
-System.out.println(&quot;Esto se verá solo si el bloque completo sale sin excepción.&quot;);
+System.out.println("Esto se verá solo si el bloque completo sale sin excepción.");
 ```
 
 ### Create our own exceptions
@@ -322,7 +322,7 @@ A program to test the exception created could be this:
 public static void main(String[] args) {
     try {
         double x = leerValor();
-        System.out.println(&quot;Raiz cuadrada de &quot; + x + &quot; = &quot; + Math.sqrt(x));
+        System.out.println("Raiz cuadrada de " + x + " = " + Math.sqrt(x));
     } catch (ValorNoValido e) {
         System.out.println(e.getMessage());
     }
@@ -330,10 +330,10 @@ public static void main(String[] args) {
 
 public static double leerValor() throws ValorNoValido {
     Scanner sc = new Scanner(System.in);
-    System.out.print(&quot;Introduce número &gt; 0 &quot;);
+    System.out.print("Introduce número > 0 ");
     double n = sc.nextDouble();
-    if (n &lt;= 0) {
-        throw new ValorNoValido(&quot;El número debe ser positivo&quot;);
+    if (n <= 0) {
+        throw new ValorNoValido("El número debe ser positivo");
     }
     return n;
 }
@@ -388,8 +388,8 @@ To overcome these problems `Log4j` framework came into the picture. `Log4j` is a
 To use Log4j2 in your framework, you just need to add the below [libraries](https://logging.apache.org/log4j/2.x/download.html):
 
 ```java
-log4j-api-&lt;version&gt;.jar
-log4j-core-&lt;version&gt;.jar
+log4j-api-<version>.jar
+log4j-core-<version>.jar
 ```
 
 ### Automatic configuration
@@ -411,7 +411,7 @@ Log levels are a mechanism to categorise logs. Levels used for identifying the s
 
 Log4j follows order as below:
 
- ALL &lt; TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL
+ ALL<TRACE < DEBUG < INFO < WARN < ERROR < FATAL
 
 If we mention log level as INFO then all INFO, WARN, ERROR and FATAL events will be logged. If we mention log level as WARN then all WARN, ERROR and FATAL events will be logged. In simple terms, all the levels below the specified level including the specified level will be considered. 
 
@@ -433,12 +433,12 @@ public class ModuleA {
 
     // Log messages
     public static void main(String[] args) {
-        logger.debug(&quot;It is a debug logger.&quot;);
-        logger.error(&quot;It is an error logger.&quot;);
-        logger.fatal(&quot;It is a fatal logger.&quot;);
-        logger.info(&quot;It is a info logger.&quot;);
-        logger.trace(&quot;It is a trace logger.&quot;);
-        logger.warn(&quot;It is a warn logger.&quot;);
+        logger.debug("It is a debug logger.");
+        logger.error("It is an error logger.");
+        logger.fatal("It is a fatal logger.");
+        logger.info("It is a info logger.");
+        logger.trace("It is a trace logger.");
+        logger.warn("It is a warn logger.");
     }
 }
 ```
@@ -482,19 +482,19 @@ Log4j has the ability to automatically configure itself during  initialization. 
 This is our log4j2.xml configuration file sample:
 
 ```xml
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Configuration status=&quot;WARN&quot;&gt;
-  &lt;Appenders&gt;
-    &lt;Console name=&quot;Console&quot; target=&quot;SYSTEM_OUT&quot;&gt;
-      &lt;PatternLayout pattern=&quot;%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;/&gt;
-    &lt;/Console&gt;
-  &lt;/Appenders&gt;
-  &lt;Loggers&gt;
-    &lt;Root level=&quot;trace&quot;&gt;
-      &lt;AppenderRef ref=&quot;Console&quot;/&gt;
-    &lt;/Root&gt;
-  &lt;/Loggers&gt;
-&lt;/Configuration&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
 ```
 
 We know now that Log4j2 will look for a configuration file in the  classpath of projects. For this we should keep a configuration file  under the resource folder. We will make changes in the above XML file to print all levels of logs in the console. Under the “Loggers” tag we  have another tag called “Root”.  Root Logger is the topmost element in  every Logger Hierarchy. This “Root” tag contains a property called  “level”. We have changed level to “trace” so that all levels will be printed.
@@ -516,7 +516,7 @@ We can also set configurationFile path with VM option:
 -Dlog4j.configurationFille=src/UD05/Log4j2/log4j2.xml
 ```
 
-We&apos;ve followed this guide: http://makeseleniumeasy.com/2021/03/11/log4j2-tutorial-1-introduction-to-apache-log4j2/ adn https://logging.apache.org/log4j/2.x/
+We&apos;ve followed this guide: http://makeseleniumeasy.com/2021/03/11/log4j2-tutorial-1-introduction-to-apache-log4j2/ and https://logging.apache.org/log4j/2.x/
 
 ## Input validation.
 
@@ -544,21 +544,21 @@ public class Validacion {
         Pattern pat = null;
         Matcher mat = null;
 
-        pat=Pattern.compile(&quot;[0-9]{8}-[a-zA-Z]&quot;);
-        System.out.print(&quot;Introduce un DNI con formato 00000000-X: &quot;);
+        pat=Pattern.compile("[0-9]{8}-[a-zA-Z]");
+        System.out.print("Introduce un DNI con formato 00000000-X: ");
         mat=pat.matcher(teclado.nextLine());
         
         if (mat.find()){
-            System.out.println(&quot;El DNI cumple el formato&quot;);
+            System.out.println("El DNI cumple el formato");
         } else {
-            System.out.println(&quot;El DNI NO cumple el formato&quot;);
+            System.out.println("El DNI NO cumple el formato");
         }
         
         //Otros patterns de ejemplo:
-        //pat=Pattern.compile(&quot;Almería&quot;,&quot;Granada&quot;,&quot;Jaén&quot;,&quot;Málaga&quot;,
-		//       	&quot;Sevilla&quot;,&quot;Cádiz&quot;,&quot;Córdoba&quot;,&quot;Huelva&quot;);   
-        //pat=Pattern.compile(&quot;Verdadero&quot;,&quot;Falso&quot;,&quot;V&quot;,&quot;F&quot;,
-        /			&quot;True&quot;,&quot;False&quot;,&quot;Córdoba&quot;,&quot;Huelva&quot;);
+        //pat=Pattern.compile("Almería","Granada","Jaén","Málaga",
+		//       	"Sevilla","Cádiz","Córdoba","Huelva");   
+        //pat=Pattern.compile("Verdadero","Falso","V","F",
+        //			"True","False","Córdoba","Huelva");
         
     }
 }
