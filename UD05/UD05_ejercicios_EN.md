@@ -27,7 +27,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
 
    List the following risks and threats according to whether they are physical or logical.
 
-   | **Threat or Risk** | **Type (F/L)** |
+   | **Threat or Risk** | **Type (P/L)** |
    | ------------------------------------------------------------ | -------------- |
    | SPAM                                                         |                |
    | Leak in a pipe that passes over the CPD | |
@@ -411,7 +411,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
             } finally {
                 return 3;
             }
-           }
+        }
     
         public static void main(String[] args) {
             System.out.println(devuelveNumero(1));
