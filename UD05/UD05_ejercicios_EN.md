@@ -63,7 +63,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
 
    | Vulnerability | Protection |
    | ---------------------------- | ---------------------------------------- |
-   | Malware.                     | Soluciones antivirus i antimalware.      |
+   | Malware.                     | Antivirus and antimalware solutions      |
    | floods. | Technical construction solutions. |
    | earthquakes. | Watertight CPD. |
    | Ransomware | Backups |

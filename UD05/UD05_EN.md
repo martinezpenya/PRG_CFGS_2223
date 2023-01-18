@@ -74,7 +74,7 @@ Therefore, we must have them identified, know their importance and define securi
 - natural: earthquakes, hurricanes, rains, floods, etc.
 - hardware: incorrect equipment maintenance, lack of backup, etc.
 - software: incorrect configuration, lack of updates, etc.
-- de comunicaciones: usar comunicaciones no cifradas, permitir el acceso desde el exterior sin control, etcétera.
+- about comunications: use unencrypted communications, allow access from outside without control, and so on.
 - storage: manufacturing defect, inappropriate place to store digital media, etc.
 - Human: weak passwords, sharing usernames and passwords, lack of training, etc.
 
