@@ -20,7 +20,7 @@ import java.io.IOException;
 
 /**
  *
- * @author David Martínez (wwww.martinezpenya.es|www.ieseduardoprimo.es)
+ * @author David Martínez (wwww.martinezpenya.es|ieseduardoprimo.es)
  */
 public class Ejemplo02 {
 

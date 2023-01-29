@@ -14,24 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package UD05.Log4j2;
+package UD05.Ejemplo07;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+/**
+ *
+ * @author David Martínez (wwww.martinezpenya.es|ieseduardoprimo.es)
+ */
+public class Excepciones {
 
-public class ModuleA {
-
-    private static final Logger logger = LogManager.getLogger();
-
-    // Log messages
     public static void main(String[] args) {
-        System.out.println("hola");
-        System.err.println("hola");
-        logger.debug("It is a debug logger.");
-        logger.error("It is an error logger.");
-        logger.fatal("It is a fatal logger.");
-        logger.info("It is a info logger.");
-        logger.trace("It is a trace logger.");
-        logger.warn("It is a warn logger.");
+        try {
+            int[] a = new int[5];
+            a[5] = 30 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Ha ocurrido un error aritmético");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Ha ocurrido un error de índice fuera de rango");
+        } finally {
+            System.out.println("Este mensaje siempre lo veremos");
+        }
+        System.out.println("Esto se verá solo si el bloque completo sale sin excepción.");
     }
 }

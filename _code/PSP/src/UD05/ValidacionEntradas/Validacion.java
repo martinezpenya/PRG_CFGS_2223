@@ -31,7 +31,8 @@ public class Validacion {
         Pattern pat = null;
         Matcher mat = null;
 
-        pat=Pattern.compile("[0-9]{8}-[a-zA-Z]");
+        //"[0-9]{8}-[a-zA-Z]"
+        pat=Pattern.compile("[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}");
         System.out.print("Introduce un DNI con formato 00000000-X: ");
         mat=pat.matcher(teclado.nextLine());
         
@@ -42,7 +43,11 @@ public class Validacion {
         }
         
         //Otros patterns de ejemplo:
-        //pat=Pattern.compile("Almería","Granada","Jaén","Málaga","Sevilla","Cádiz","Córdoba","Huelva");
-        //pat=Pattern.compile("Verdadero","Falso","V","F","True","False","Córdoba","Huelva");
+        //pat=Pattern.compile("Almería","Granada","Jaén",
+        //"Málaga","Sevilla","Cádiz","Córdoba","Huelva");
+        //pat=Pattern.compile("Verdadero","Falso","V","F","True","False");
+        
+        //(+00)000 000 000
+        //"(+[0-9]{2})[0-9]{3} [0-9]{3} [0-9]{3}"
     }
 }
