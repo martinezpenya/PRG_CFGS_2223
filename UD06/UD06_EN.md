@@ -35,7 +35,7 @@ Cryptographic systems may need to meet certain characteristics. The most importa
 - **Confidentiality**. Only authorized people or systems can access the information.
 - **Integrity**. The information managed by the cryptographic system must remain intact, without suffering losses or alterations.
 - **Authentication**. It must be possible to verify the identity of system participants.
-- ** Linking or non-repudiation **. It has mechanisms so that the creator or issuer of information cannot deny its link or authorship.
+- **Linking or non-repudiation**. It has mechanisms so that the creator or issuer of information cannot deny its link or authorship.
 
 In some cryptographic systems, not all of these characteristics must be fulfilled simultaneously. In fact, there are systems that expressly require non-compliance with any of them to fulfill their objective.
 
@@ -135,8 +135,8 @@ G((Identifier\n+HASH)) --> Process
 The most popular HASH algorithms are the following, although there are many more:
 
 - MD5 (Message Digest Algorithm 5). Published in 1992, its use is currently not recommended due to HASH collisions being detected.
-- My SHA-1 (Secure Hash Algorithms 1). Published in 1995, its use is not recommended due to HASH collisions.
-- My SHA-2 (Secure Hash Algorithms 2). It is an evolution of SHA-1 and therefore more secure. It has many variants, the best known being SHA-256 and SHA-512 and the most secure (no HASH collisions detected) SHA-512/224 and SHA-512/256. The successive variants have been presented since 2004.
+- SHA-1 (Secure Hash Algorithms 1). Published in 1995, its use is not recommended due to HASH collisions.
+- SHA-2 (Secure Hash Algorithms 2). It is an evolution of SHA-1 and therefore more secure. It has many variants, the best known being SHA-256 and SHA-512 and the most secure (no HASH collisions detected) SHA-512/224 and SHA-512/256. The successive variants have been presented since 2004.
 - SHA-3 (Secure Hash Algorithms 3). Although the similarity in the name is evident, this algorithm is not an evolution of SHA-1 or SHA-2, since they are technically different. It has many variants, named SHA-XXX and SHAKEXXX. Published in 2015.
 
 Java provides at least the following HASH algorithms: MD5, SHA-1 and SHA-256, although depending on the Java implementation many more are available. For example, Java version 17 has "MD2", "MD", "SHA-1", "SHA-224", "SHA-256", "SHA-384", "SHA-512", "SHA -512/224”, “SHA-512/256”, “SHA3-224”, “SHA3-256”, “SHA3-384”, and “SHA3-512”.
@@ -173,7 +173,7 @@ The main private key or symmetric algorithms are:
 - **IDEA**. Published in 1991 as an alternative to DES.
 - **Blowfish**. It was created as an alternative to DES in 1993. It is a simple algorithm and considered safe.
 - **RC5** (Rivest Cipher). Designed in 1994. This algorithm is part of the base of AES.
-- Triple **OFF**. Published in 1995, it is also known as 3DES. It is an evolution of the DES algorithm, since it performs a triple DES encryption on the messages, increasing security by being able to use longer keys. Although still considered secure, its use is not recommended and is being replaced by AES, a faster and more robust algorithm.
+- **3DES**. Published in 1995, it is also known as 3DES. It is an evolution of the DES algorithm, since it performs a triple DES encryption on the messages, increasing security by being able to use longer keys. Although still considered secure, its use is not recommended and is being replaced by AES, a faster and more robust algorithm.
 - **Twofish**. Introduced in 1998, it is derived from Blowfish and competed with AES as a candidate to replace DES as the standard. It is considered a safe algorithm.
 - **AES** (Advanced Encryption Standard). Also known as Rijndael, it is probably the most popular symmetric cryptography algorithm today. It was developed in Belgium in 1998 and adopted as a standard in 2001. It is up to six times faster than DES and 3DES. It is currently the recommended private key algorithm.
 
@@ -681,7 +681,7 @@ The generated system consists of three classes:
 - `AESSimpleManager`. It implements the functionality related to the generation of the key from the user's password (must be 16 bytes) and the encryption and decryption methods. Contains the following methods:
   - `getKey`. Generates the encryption and decryption key from the user's password.
   - `encrypt`. Encrypts a String.
-  - `decipher'. Decrypt a String.
+  - `decipher`. Decrypt a String.
 - `CipherAESSimple`. It contains a `main` method that generates the key, encrypts a text and stores it in a file.
 - `DecipherAESSimple`. It contains a `main` method that generates the key, reads the contents of a file, and decrypts it.
 
@@ -778,8 +778,8 @@ public class DecipherAESSimple {
 This encryption application performs the following operations:
 
 - Generate the public and private keys of a user.
-- Encrypt a text with the user's private key and store it in a file.
-- Read a file with an encrypted text and decrypt it with the user's public key.
+- Encrypt a text with the user's public key and store it in a file.
+- Read a file with an encrypted text and decrypt it with the user's private key.
 
 The RSA algorithm is used.
 
@@ -795,7 +795,7 @@ The generated system consists of three classes:
 
 `RSASender.java`: Encrypts a text with the private key obtained from the file generated in `KeysManager.java` and stores the result in a file. This class must be executed second.
 
-`RSAReceptorManager.java`: Decrypts the message stored in a file by `RSASender.java` with the public key obtained from the file generated in `KeysManager.java`. Show the message clearly on the console. This class should be executed last.
+`RSAReceptor.java`: Decrypts the message stored in a file by `RSASender.java` with the public key obtained from the file generated in `KeysManager.java`. Show the message clearly on the console. This class should be executed last.
 
 **KeysManager.java**
 
