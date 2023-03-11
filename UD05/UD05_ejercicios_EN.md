@@ -86,7 +86,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
    d) Roll.
 
 8. Which of the following physical characteristics cannot be a biometric access control?
-   to the voice.
+   a) the voice.
    b) The fingerprint.
    c) Facial recognition.
    d) The height.

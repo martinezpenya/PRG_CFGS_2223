@@ -30,8 +30,6 @@ import javax.crypto.Cipher;
  */
 public class RSAReceiver {
 
-    private final static String DATOS = "Secret access code is 2294";
-
     private static byte[] decipher(byte[] cipheredMessage, Key key) throws Exception {
         Cipher decipherer = Cipher.getInstance("RSA");
         decipherer.init(Cipher.DECRYPT_MODE, key);

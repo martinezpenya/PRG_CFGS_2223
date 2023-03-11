@@ -512,7 +512,7 @@ The main elements that are part of a distributed system are:
 - Software components. The software elements that implement the functionality of the system, mainly classes.
 - Remote registration of objects. Network element that knows the location of the components in the nodes.
 - Network and protocols. Physical and logical infrastructure necessary to communicate the different network participants.
-- To Remote interface. It is the interface shared by the client and the server, although the implementation is on the server. The client, for his part, will obtain a remote instance of said interface and perform the operations on it.
+- A Remote interface. It is the interface shared by the client and the server, although the implementation is on the server. The client, for his part, will obtain a remote instance of said interface and perform the operations on it.
 - Stubs. It is the projection of the remote object on the client. The client invokes the remote methods on the stub, and the stub propagates the calls to the equivalent remote implementation, or skeleton.
 - Skeleton. It is the remote object that receives the calls from the stub and causes the functionality to be executed on the server side.
 

@@ -98,7 +98,7 @@ imgcover:/media/DADES/NextCloud/DOCENCIA/PSP_2223/PSP-CFGS-2223/UD04/assets/cove
     b) Java Email API.
     c) JavaMail.
     d) Java Message API.
-12. What is the name of the program provided by the Java JDK to bootstrap object registration in RMI applications?
+12. What is the name of the program provided by the Java JDK to perform object registration in RMI applications?
     a) by registrars.
     b) rmiregistry.
     e) lookup.

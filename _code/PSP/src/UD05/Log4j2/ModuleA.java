@@ -25,8 +25,6 @@ public class ModuleA {
 
     // Log messages
     public static void main(String[] args) {
-        System.out.println("hola");
-        System.err.println("hola");
         logger.debug("It is a debug logger.");
         logger.error("It is an error logger.");
         logger.fatal("It is a fatal logger.");
